@@ -1,0 +1,237 @@
+/* AppBar Styles */
+.app-bar {
+  background-color: rgb(59, 179, 105); /* Metallic silver */
+  /* background-image: linear-gradient(315deg, #bdc3c7 0%, #2c3e50 74%); Dark gray transition */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  max-height: 50px;
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    max-height: 40px;
+  }
+}
+
+/* Image container for positioning overlay */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Top-left image name overlay */
+.image-name-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+/* Responsive font size for mobile */
+@media (max-width: 600px) {
+  .image-name-overlay {
+    font-size: 12px;
+    padding: 4px 8px;
+    top: 8px;
+    left: 8px;
+  }
+}
+
+/* Hide the default legend */
+.carouselslide .legend {
+  display: none !important;
+}
+
+/* Ensure image fits properly */
+.carousel-image {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .carousel-image {
+    max-height: 250px;
+  }
+}
+
+
+.carousel .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4edda;
+  height: 400px;
+  transition: all 1s ease-in-out; /* Slide transition effect */
+}
+
+@media (max-width: 600px) {
+  .carousel .slide {
+    height: 250px;
+  }
+}
+
+/* Responsive AppBar and Drawer Menu */
+.drawer-menu-button {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .drawer-menu-button {
+    display: block;
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+
+  .custom-prev-arrow,
+  .custom-next-arrow {
+    display: none;
+  }
+}
+
+/* Custom Arrow Styles for Carousel */
+.custom-prev-arrow,
+.custom-next-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  padding: 10px;
+  border-radius: 50%; /* Rounded arrows for a smoother look */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background and scaling */
+}
+
+/* Arrow Hover Effect with Scaling Animation */
+.custom-prev-arrow:hover,
+.custom-next-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.2); /* Scale up the arrow slightly */
+}
+
+/* Positioning Arrows */
+.custom-prev-arrow {
+  left: 10px;
+}
+
+.custom-next-arrow {
+  right: 10px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+  .custom-prev-arrow,
+  .custom-next-arrow {
+    font-size: 24px; /* Smaller arrow size on mobile */
+    padding: 8px; /* Reduce padding */
+  }
+  
+  /* Hide arrows on very small screens, if desired */
+  @media (max-width: 400px) {
+    .custom-prev-arrow,
+    .custom-next-arrow {
+      display: none; /* Hide arrows on very small screens */
+    }
+  }
+}
+
+/* Button Styles */
+.MuiButton-root {
+  font-size: 1rem;
+  text-transform: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+}
+
+.MuiButton-root:hover {
+  background-color: #adb8be;
+  color: white;
+}
+
+.carouselslide{
+  background-color: #d4edda; 
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+   align-items: center;
+}
+
+/* Custom styling for h2 in carousel slide */
+.carouselslide h2 {
+  font-weight: bold;
+  color: #00BFFF; /* Icy blue */
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 3rem;
+  animation: fadeInSlide 1.5s ease-in-out both;
+
+  background: linear-gradient(90deg, #00BFFF, #0047AB); /* Icy blue to rich cobalt blue gradient */
+  background-clip: text; /* Standard background-clip for modern browsers */
+  -webkit-background-clip: text; /* Webkit for Safari and Chrome */
+  -webkit-text-fill-color: transparent; /* Required for text color to show gradient */
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.carousel .carouselslide {
+  animation: fadeIn 1.2s ease-in-out both; /* Apply fade-in and scale effect to each slide */
+}
+
+.styled-button {
+  color: #ffffff;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #007FFF, #4682B4); /* Bright azure to soft steel blue */
+  box-shadow: 0px 4px 15px rgba(0, 127, 255, 0.5); /* Subtle azure glow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.styled-button:hover {
+  background: linear-gradient(90deg, #1E90FF, #5F9EA0); /* Lighter azure with rich steel blue */
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 20px rgba(30, 144, 255, 0.8); /* Enhanced azure glow */
+}
+
+.styled-button:active {
+  background: linear-gradient(90deg, #4169E1, #4682B4); /* Royal blue to soft steel blue */
+  box-shadow: 0px 2px 10px rgba(65, 105, 225, 0.3); /* Royal blue shadow */
+  transform: translateY(0);
+}

@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the report */
+.container {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background */
+}
+
+/* Title Styles */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Search Bar Styles */
+.custom-search {
+    width: 250px; /* Adjust the width as needed */
+    margin-bottom: 20px;
+}
+
+/* Date Picker Styles */
+.custom-date {
+    width: 180px; /* Adjust the width as needed */
+    margin-right: 10px;
+}
+
+/* Filter Container Styles */
+.filter-container {
+    max-height: 200px; /* Limit height for scrolling */
+    overflow-y: auto; /* Enable scrolling */
+    border: 1px solid #ccc; /* Light border */
+    padding: 10px; /* Padding around filter items */
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Individual Filter Checkbox Styles */
+.filter-check {
+    margin-bottom: 10px; /* Spacing between checkboxes */
+}
+
+/* Sortable Table Header Styles */
+.sortable {
+    cursor: pointer; /* Pointer cursor for sortable columns */
+    position: relative; /* Position for sort icons */
+}
+
+/* Sort Icon Rotation */
+.rotate-up {
+    transform: rotate(180deg); /* Rotate icon for descending order */
+}
+
+/* Table Styles */
+.table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+/* Table Header Styles */
+th {
+    background-color: #343a40; /* Dark background for header */
+    color: white; /* White text */
+    padding: 12px; /* Padding for header cells */
+}
+
+/* Table Cell Styles */
+td {
+    padding: 10px; /* Padding for table cells */
+    border: 1px solid #dee2e6; /* Light border */
+}
+
+/* Highlight Styles */
+.highlight {
+    background-color: yellow; /* Highlight background color */
+}
+
+/* Pagination Controls */
+.pagination-controls {
+    display: flex; /* Flexbox for pagination controls */
+    justify-content: space-between; /* Space between controls */
+    align-items: center; /* Center align vertically */
+    margin-top: 20px; /* Spacing above controls */
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for buttons */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Spinner Styles */
+.spinner {
+    display: block; /* Block display for centering */
+    margin: 20px auto; /* Center align spinner */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custom-search {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .custom-date {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 10px; /* Margin adjustment */
+    }
+}

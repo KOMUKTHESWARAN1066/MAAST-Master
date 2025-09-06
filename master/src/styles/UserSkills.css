@@ -1,0 +1,149 @@
+/* Enhanced styles for grouped skills table */
+.grouped-skills-table table td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.grouped-skills-table table td:nth-child(1),
+.grouped-skills-table table td:nth-child(2) {
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Ensure consistent row height */
+.grouped-skills-table table tbody tr {
+    min-height: 60px;
+}
+
+/* Responsive table wrapper */
+.grouped-skills-table {
+    min-width: 100%;
+}
+
+/* Header styling for grouped table */
+.grouped-skills-table thead th {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 12px 8px;
+    border: 1px solid #dee2e6;
+}
+
+/* Hover effect for table rows */
+.grouped-skills-table tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Action button styling */
+.grouped-skills-table .text-center {
+    min-width: 80px;
+}
+
+/* Search and header actions */
+.user-skills-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.user-skills-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.user-skills-actions .form-group {
+    margin-bottom: 0;
+    min-width: 250px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .user-skills-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .user-skills-actions {
+        justify-content: space-between;
+    }
+    
+    .user-skills-actions .form-group {
+        min-width: 200px;
+    }
+}
+
+/* Stage column styling */
+.grouped-skills-table tbody td[style*="backgroundColor"] {
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+/* Notification styling */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Stages and skills header */
+.stages-skills-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Loading spinner enhancement */
+.spinner-border-sm {
+    margin-right: 5px;
+}
+
+/* Checkbox list styling */
+.checkbox-list {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.checkbox-list .form-check {
+    margin-bottom: 8px;
+}
+
+/* Selected employees table */
+.selected-employees {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Sort icon rotation */
+.rotate-up {
+    transform: rotate(180deg);
+}
+
+.rotate-down {
+    transform: rotate(0deg);
+}
+
+/* Table container scrolling */
+.table-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
